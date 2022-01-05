@@ -16,7 +16,7 @@
 	String duty=request.getParameter("duty");
 	String phone=request.getParameter("phone");
 	
-	pstmt=conn.prepareStatement("update person0105 set name=?,dept=?,position=?,duty=?,phone=? where id=?");
+	pstmt=conn.prepareStatement("update person0412 set name=?,dept=?,position=?,duty=?,phone=? where id=?");
 	pstmt.setString(6, id);
 	pstmt.setString(1, name);
 	pstmt.setString(2, dept);
@@ -29,6 +29,6 @@
 </body>
 <script>
 	alert("수정 완료");
-	location.href="personSelect.jsp";
+	location.href="select.jsp";
 </script>
 </html>

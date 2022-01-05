@@ -9,10 +9,10 @@
 <body>
 <nav>
 <ul>
-<li><a href="#">조회</a></li>
-<li><a href="#">사원등록</a></li>
-<li><a href="#">정보변경</a></li>
-<li><a href="#">퇴사처리</a></li>
+<li><a href="select.jsp">조회</a></li>
+<li><a href="insertForm.jsp">사원등록</a></li>
+<li><a href="update.jsp">정보변경</a></li>
+<li><a href="delete.jsp">퇴사처리</a></li>
 <li><a href="#">종료</a></li>
 <li><a href="index.jsp">홈으로</a></li>
 </ul>

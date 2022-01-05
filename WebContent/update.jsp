@@ -12,7 +12,7 @@
 <%@ include file="DBConn.jsp" %>
 <%	
 	String id=request.getParameter("id");
-	pstmt=conn.prepareStatement("select * from person0105 where id=?");
+	pstmt=conn.prepareStatement("select * from person0412 where id=?");
 	pstmt.setString(1, id);
 	rs=pstmt.executeQuery();
 	if(rs.next()){
@@ -28,16 +28,16 @@
 
 <section>
 <h2>인사관리 사원수정 화면</h2>
-<form name="form" method="post" action="personUpdateProcess.jsp">
+<form name="form" method="post" action="updateProcess.jsp">
 <table border=1 id="t1">
 <tr>
-<th>사원번호</th>
-<td><input type="text" name="id" id="id1" value="<%=id %>"></td>
+<th>성명</th>
+<td><input type="text" name="name" id="in2" value="<%=name %>"></td>
 </tr>
 
 <tr>
-<th>성명</th>
-<td><input type="text" name="name" id="id1" value="<%=name %>"></td>
+<th>사원번호</th>
+<td><input type="text" name="id" id="in2" value="<%=id %>">사원번호를 통해 정보를 수정</td>
 </tr>
 
 <tr>
@@ -67,18 +67,18 @@
 
 <tr>
 <th>직책</th>
-<td><input type="text" name="duty" id="id1" value="<%=duty %>"></td>
+<td><input type="text" name="duty" id="in2" value="<%=duty %>"></td>
 </tr>
 
 <tr>
 <th>연락처</th>
-<td><input type="text" name="phone" id="id1" value="<%=phone %>"></td>
+<td><input type="text" name="phone" id="in2" value="<%=phone %>"></td>
 </tr>
 
 <tr>
 <td colspan=2 align=center>
 	<input id="b1" type="button" value="변경" onclick="check()">
-	<input id="b1" type="reset" value="취소">
+	<input id="b1" type="button" value="취소" onclick="location.href='index.jsp'">
 </td>
 </tr>
 <%} %>

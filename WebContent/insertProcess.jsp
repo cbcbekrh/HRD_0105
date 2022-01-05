@@ -16,7 +16,7 @@
 	String duty=request.getParameter("duty");
 	String phone=request.getParameter("phone");
 	
-	pstmt=conn.prepareStatement("insert into person0105 values(?,?,?,?,?,?)");
+	pstmt=conn.prepareStatement("insert into person0412 values(?,?,?,?,?,?)");
 	pstmt.setString(1, id);
 	pstmt.setString(2, name);
 	pstmt.setString(3, dept);
@@ -29,6 +29,6 @@
 </body>
 <script>
 	alert("등록 완료");
-	location.href="personSelect.jsp";
+	location.href="select.jsp";
 </script>
 </html>

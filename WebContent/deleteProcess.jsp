@@ -10,19 +10,19 @@
 	String id=request.getParameter("id");
 	String name=request.getParameter("name");
 	
-	pstmt=conn.prepareStatement("select name from person0105 where id=?");
+	pstmt=conn.prepareStatement("select name from person0412 where id=?");
 	pstmt.setString(1, id);
 	rs=pstmt.executeQuery();
 	if(rs.next()){
 		String name2=rs.getString("name");
 		if(name.equals(name2)){
-			pstmt=conn.prepareStatement("delete from person0105 where id=?");
+			pstmt=conn.prepareStatement("delete from person0412 where id=?");
 			pstmt.setString(1, id);
 			pstmt.executeUpdate();
 			%>
 			<script>
 				alert("삭제 완료");
-				location.href="personSelect.jsp";
+				location.href="select.jsp";
 			</script>
 			<%
 		}else{
